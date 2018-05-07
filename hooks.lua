@@ -44,6 +44,7 @@ function OnPlayerDestroyed(Player)
 				OtherPlayer:GetWorld():ScheduleTask(200,
 					function()
 						OtherPlayer:SetVisible(true)
+						OtherPlayer:RemoveEntityEffect(cEntityEffect.effInvisibility)
 					end
 				)
 				OtherPlayer:SendMessageInfo("The player you were controlling has disconnected. You are invisible for 10 seconds.")
@@ -130,6 +131,7 @@ function OnWorldTick(World, TimeDelta)
 			Target:SetSprintingMaxSpeed(Target:GetSprintingMaxSpeed())
 
 			Controller:SetVisible(false)
+			Controller:AddEntityEffect(cEntityEffect.effInvisibility, 99999, 0)
 		end
 	end
 	World:ForEachPlayer(UpdatePreferences)

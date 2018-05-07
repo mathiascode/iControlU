@@ -86,6 +86,7 @@ function HandleStopCommand(Split, Controller)
 		Controller:GetWorld():ScheduleTask(200,
 			function()
 				Controller:SetVisible(true)
+				Controller:RemoveEntityEffect(cEntityEffect.effInvisibility)
 				Controller:SendMessageInfo("You are now visible")
 			end
 		)

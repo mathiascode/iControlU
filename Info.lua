@@ -1,7 +1,7 @@
 g_PluginInfo = {
 	Name = "iControlU",
-	Version = "1",
-	Date = "2017-11-27",
+	Version = "2",
+	Date = "2018-05-07",
 	SourceLocation = "https://github.com/mathiascode/iControlU",
 	Description = [[Plugin for Cuberite that allows players to control the movements, inventory and chat of other players.]],
 
